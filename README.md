@@ -1,4 +1,4 @@
 TarielBASIC
 ===========
 
-A portable BASIC interpreter written in C.
+A portable BASIC interpreter written in C
