@@ -20,5 +20,5 @@ void portable_input_int(int* val){
 }
 
 void portable_gets(char* buf){
-	gets(buf);	
+	fgets(buf, MAXLLEN, stdin);	
 } 
