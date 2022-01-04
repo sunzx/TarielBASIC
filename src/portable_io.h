@@ -7,5 +7,6 @@ extern char Prbuf[MAXLLEN];
 void portable_puts(char* buf);
 void portable_input_int(int* val);
 void portable_gets(char* buf); 
+void portable_fgets(char *buf, FILE *file);
 
 #endif 

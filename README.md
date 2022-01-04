@@ -3,10 +3,23 @@ TarielBASIC
 
 A portable BASIC interpreter written in C
 
-## Usage
+## Build
 
 ```bash
 cmake .
 make
+```
+
+## Usage
+
+### Interactive mode
+
+```bash
 ./main
+```
+
+### Execution mode
+
+```
+./main [target]
 ```
