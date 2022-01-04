@@ -102,7 +102,22 @@ int main(int argc, char *argv[])
 {	 
 	prog_init();
 
-	while(1){
+	if (argc>=2) {
+		sprintf(Prbuf, "Loading %s...\n", argv[1]);
+		portable_puts(Prbuf);
+
+		FILE* file=fopen(argv[1], "r");
+
+		while(1){
+			portable_fgets(Prbuf, file);
+			if (interpreter_immediate_line(Prbuf)==S_STOP) break;
+		}
+		interpreter_immediate_line("RUN");
+
+		fclose(file);
+	}
+
+	else while(1){
 		portable_puts(">"); 
 		portable_gets(Prbuf);
 		if (interpreter_immediate_line(Prbuf)==S_STOP) break;
