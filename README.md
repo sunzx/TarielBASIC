@@ -23,3 +23,9 @@ make
 ```
 ./main [target]
 ```
+
+## Example
+
+```
+./main Hanoi.bas
+```
